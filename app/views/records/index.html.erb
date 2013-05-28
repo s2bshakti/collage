@@ -1,0 +1,9 @@
+<h1>Student Details</h1>
+<% @post.each do |t| %>
+<li><%= t.name %></li>
+<% end %>
+<%= form_tag("add",:method => "post") do %>
+<%=text_field_tag(:q) %>
+<%= submit_tag("Add Student") %>
+<% end %>
+<%= link_to "Delete",'/records/delete' %>
